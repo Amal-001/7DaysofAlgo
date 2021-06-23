@@ -1,0 +1,56 @@
+JAVA CODE
+
+```java
+
+import java.util.Scanner;
+
+class SpellItOut
+{
+	int  n,r,s,f,temp;
+	//String  s1,s2,s3;
+	
+	public int input() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number (range 0-999).");
+		n = sc.nextInt();
+		return n;
+		
+	}
+	public  void logic(int n) {
+	r = n % 10;      //last digit
+	temp = n / 10;
+	s = temp % 10;   //2nd digit
+	f = n/100;       //1st digit
+	String s1[] = {" ","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Ninteen"};
+	String s2[] = {" ","Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Nintey"};
+	String s3 = "Hundred";
+	 
+	if (n==0)
+		System.out.println("zero");
+	else if (n<20 && n!=0)
+		System.out.println(s1[n]);
+	else if(n<100)
+		System.out.println(s2[s]+" "+s1[r]);
+	else
+		System.out.println(s1[f]+" "+s3+" "+s2[s]+" "+s1[r]);
+		
+	}
+	
+}
+public class Spellit {
+
+	public static void main(String[] args) {
+		int numb;
+		SpellItOut s = new SpellItOut();
+		numb = s.input();
+		s.logic(numb);
+
+	}
+
+}
+
+
+```
+
+
